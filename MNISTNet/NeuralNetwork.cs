@@ -9,19 +9,19 @@ namespace MNISTNet
     internal class NeuralNetwork
     {
         // CONST DEFINITIONS
-        const int InputNeurons = 784; // 28 * 28
-        const int L1Neurons = 64;
-        const int L2Neurons = 32;
-        const int OutputNeurons = 10;
+        public const int InputNeurons = 784; // 28 * 28
+        public const int L1Neurons = 64;
+        public const int L2Neurons = 32;
+        public const int OutputNeurons = 10;
 
         Matrix<double> X;
-        Matrix<double> W1;
+        public Matrix<double> W1;
         Matrix<double> Z2;
         Matrix<double> a2;
-        Matrix<double> W2;
+        public Matrix<double> W2;
         Matrix<double> Z3;
         Matrix<double> a3;
-        Matrix<double> W3;
+        public Matrix<double> W3;
         Matrix<double> Z4;
         Matrix<double> yHat;
 
@@ -87,8 +87,8 @@ namespace MNISTNet
                 int actual = 0;
                 for (int j = 0; j < yHat.RowCount; j++)
                 {
-                    if (yHat[j, i] > yHat[actual, i])
-                        actual = j;
+                    if (Math.Abs(yHat[j, i]) > yHat[actual, i])
+                        actual = Math.Abs(j);
                 }
 
                 if (actual == expected)
@@ -110,7 +110,7 @@ namespace MNISTNet
             {
                 for (int j = 0; j < x.RowCount; j++)
                 {
-                    x[j, i] = SpecialFunctions.Logistic(x[j,i]);
+                    x[j, i] = SpecialFunctions.Logistic(x[j, i]);
                 }
             }
 
