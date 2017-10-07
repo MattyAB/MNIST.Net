@@ -12,6 +12,7 @@ namespace MNISTNet
             DataLoader dl = new DataLoader(test, train);
 
             Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
     }
 }
