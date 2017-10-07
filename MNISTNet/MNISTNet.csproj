@@ -5,4 +5,8 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="mathnet.numerics" Version="3.20.0" />
+  </ItemGroup>
+
 </Project>

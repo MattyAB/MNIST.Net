@@ -11,6 +11,10 @@ namespace MNISTNet
         {
             DataLoader dl = new DataLoader(test, train);
 
+            Console.WriteLine("Loaded all data.");
+
+            NeuralNetwork nn = new NeuralNetwork(dl);
+
             Console.WriteLine("Hello World!");
             Console.ReadLine();
         }

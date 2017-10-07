@@ -48,12 +48,25 @@ namespace MNISTNet
                     throw new Exception("Incorrect type passed to GetData()");
             }
         }
+
+        public List<Image> GetData(string type)
+        {
+            switch (type)
+            {
+                case "test":
+                    return TestData;
+                case "train":
+                    return TrainData;
+                default:
+                    throw new Exception("Incorrect type passed to GetData()");
+            }
+        }
     }
 
     class Image
     {
-        int expected;
-        double[] pixels = new double[28 * 28];
+        public int expected;
+        public double[] pixels = new double[28 * 28];
 
         public Image(int[] input)
         {
