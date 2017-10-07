@@ -15,6 +15,8 @@ namespace MNISTNet
 
             NeuralNetwork nn = new NeuralNetwork(dl);
 
+            Console.WriteLine(nn.Evaluate());
+
             Console.WriteLine("Hello World!");
             Console.ReadLine();
         }
