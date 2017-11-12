@@ -5,6 +5,8 @@ namespace MNISTNet
 {
     internal class GeneticTrainer
     {
+        /**
+
         NeuralNetwork CurrentNetwork;
 
         public GeneticTrainer(NeuralNetwork net)
@@ -47,5 +49,6 @@ namespace MNISTNet
 
             CurrentNetwork = nets[best];
         }
+    **/
     }
 }

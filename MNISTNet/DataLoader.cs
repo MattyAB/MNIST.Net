@@ -36,6 +36,25 @@ namespace MNISTNet
             }
         }
 
+        int batch = 0;
+        const int batchSize = 20;
+
+        public List<Image> GetNextTrainBatch()
+        {
+            int batchOffset = (batch * batchSize) % TrainData.Count;
+
+            batch++;
+
+            List<Image> output = new List<Image>();
+
+            for (int i = batchOffset; i < batchOffset + batchSize; i++)
+            {
+                output.Add(TrainData[i]);
+            }
+
+            return output;
+        }
+
         public Image GetData(string type, int location)
         {
             switch (type)

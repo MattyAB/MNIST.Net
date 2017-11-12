@@ -13,11 +13,9 @@ namespace MNISTNet
 
             Console.WriteLine("Loaded all data.");
 
-            NeuralNetwork nn = new NeuralNetwork(dl);
+            Network nn = new Network(dl);
 
-            GeneticTrainer gt = new GeneticTrainer(nn);
-
-            gt.Train(1000);
+            nn.Train(0.01);
 
             Console.WriteLine("Hello World!");
             Console.ReadLine();
